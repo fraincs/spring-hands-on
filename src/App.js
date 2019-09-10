@@ -1,17 +1,11 @@
-import React, { useState } from "react";
-import { animated, useSpring } from "react-spring";
+import React from "react";
+import Spring from "./components/useSpring";
 import "./App.css";
 
 function App() {
-  const [toggle, setToggle] = useState(false);
-  const props = useSpring({ opacity: toggle ? 1 : 0 });
-
   return (
     <div className="App">
-      <button onClick={() => setToggle(!toggle)}>Toggle</button>
-      <animated.div style={props}>
-        <p className="f1">Hello</p>
-      </animated.div>
+      <Spring></Spring>
     </div>
   );
 }
