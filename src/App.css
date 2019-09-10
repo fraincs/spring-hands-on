@@ -1,6 +1,7 @@
 @import "~@orbit-ui/css-normalize";
 @import "~@orbit-ui/foundation/apricot.css";
 @import "~@orbit-ui/tachyons/apricot.css";
+@import "~@orbit-ui/semantic-ui-theme";
 
 body {
   padding: 32px 20px;

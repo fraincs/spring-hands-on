@@ -1,5 +1,6 @@
-import { animated, useTransition } from "react-spring";
 import React, { useState } from "react";
+import { animated, useTransition } from "react-spring";
+import { Button } from "semantic-ui-react";
 
 function Transition() {
   const [on, toggle] = useState(false);
@@ -13,9 +14,9 @@ function Transition() {
   return (
     <div className="mt10">
       <h1>Simple useTransition</h1>
-      <button className="mb13" onClick={() => toggle(!on)}>
+      <Button className="mb13" onClick={() => toggle(!on)}>
         Change
-      </button>
+      </Button>
       {transition.map(
         ({ item, key, props }) =>
           item && (
