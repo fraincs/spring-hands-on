@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@orbit-ui/css-normalize": "^1.0.0",
+    "@orbit-ui/fonts": "^1.0.0",
+    "@orbit-ui/foundation": "^1.0.0",
+    "@orbit-ui/icons": "^1.0.1",
+    "@orbit-ui/tachyons": "^1.0.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",

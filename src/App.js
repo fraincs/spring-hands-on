@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <button onClick={() => setToggle(!toggle)}>Toggle</button>
       <animated.div style={props}>
-        <p>Hello</p>
+        <p className="f1">Hello</p>
       </animated.div>
     </div>
   );

@@ -1,19 +1,8 @@
+@import "~@orbit-ui/css-normalize";
+@import "~@orbit-ui/foundation/apricot.css";
+@import "~@orbit-ui/tachyons/apricot.css";
+
 body {
   padding: 32px 20px;
   text-align: center;
-}
-
-button {
-  background-color: teal;
-  color: white;
-  outline: none;
-  border: none;
-  padding: 0.75em;
-  font-size: 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-p {
-  font-size: 1.125rem;
 }
