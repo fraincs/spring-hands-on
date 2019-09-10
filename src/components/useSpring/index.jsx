@@ -5,17 +5,15 @@ function Spring() {
   const [toggle, setToggle] = useState(false);
   const props = useSpring({
     opacity: toggle ? 1 : 0,
-    transform: toggle ? "translate3d(0,0,0)" : "translate3d(0, 100px, 0)"
+    transform: toggle ? "translate3d(0,0,0)" : "translate3d(0, 50px, 0)"
   });
 
   return (
     <>
       <h1>Simple useSpring</h1>
-      <button className="ui button" onClick={() => setToggle(!toggle)}>
-        Toggle
-      </button>
+      <button onClick={() => setToggle(!toggle)}>Toggle</button>
       <animated.div style={props}>
-        <p className="f1">Hello</p>
+        <p className="f1">Hello World</p>
       </animated.div>
     </>
   );
