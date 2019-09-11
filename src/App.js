@@ -1,6 +1,8 @@
 import React from "react";
 import Spring from "./components/useSpring";
 import Transition from "./components/useTransition";
+import Inner from "./components/inner";
+
 import "./App.css";
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
     <div className="App">
       <Spring></Spring>
       <Transition></Transition>
+      <Inner></Inner>
     </div>
   );
 }
