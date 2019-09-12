@@ -8,9 +8,15 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Spring></Spring>
-      <Transition></Transition>
-      <Inner></Inner>
+      <div className="w-50">
+          <Spring></Spring>
+          <div className="">    
+              <Transition></Transition>
+          </div>
+          <div className="mt6">    
+              <Inner></Inner>
+          </div>            
+      </div>
     </div>
   );
 }
