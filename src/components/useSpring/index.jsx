@@ -11,8 +11,9 @@ function Spring() {
 
   return (
     <>
-      <h1>Simple useSpring</h1>
-      <Button onClick={() => setToggle(!toggle)}>Toggle</Button>
+      <div className="flex justify-center">
+        <Button onClick={() => setToggle(!toggle)}>Toggle</Button>
+      </div>
       <animated.div style={props}>
         <p className="f1">Hello World</p>
       </animated.div>

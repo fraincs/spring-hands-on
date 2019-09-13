@@ -12,11 +12,10 @@ function Transition() {
   });
 
   return (
-    <div className="mt10">
-      <h1>Simple useTransition</h1>
-      <Button className="mb13" onClick={() => toggle(!on)}>
-        Change
-      </Button>
+    <>
+      <div className="flex justify-center">
+        <Button onClick={() => toggle(!on)}>Show</Button>
+      </div>
       {transition.map(
         ({ item, key, props }) =>
           item && (
@@ -25,7 +24,7 @@ function Transition() {
             </animated.div>
           )
       )}
-    </div>
+    </>
   );
 }
 
