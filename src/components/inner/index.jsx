@@ -6,25 +6,21 @@ import { animConfig } from "../../utils/configs";
 function Inner() {
   const [number, setNumber] = useState(0);
 
-  const props = useSpring({
-    config: animConfig,
-    from: { chiffre: number },
-    to: { chiffre: number }
-  });
-
-  const { chiffre } = { ...props };
+  // const props = useSpring({
+  //   config: animConfig,
+  //   from: { opacity: 0 },
+  //   to: { opacity: 1 }
+  // });
 
   return (
     <>
       <div className="flex justify-center">
         <Button onClick={() => setNumber(number === 0 ? 1 : 0)}>
-          Increase / Decrease
+          Increase / Decrease Number
         </Button>
       </div>
       <p className="f1">
-        <animated.span>
-          {chiffre.interpolate(v => `${Math.round(v * 100)}%`)}
-        </animated.span>
+        <animated.span>{number}</animated.span>
       </p>
     </>
   );

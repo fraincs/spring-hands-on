@@ -17,6 +17,9 @@ function App() {
         <Transition></Transition>
       </div>
       <h1>Inner Text</h1>
+      <p className="tl mb4">
+        Change this animation in order to make it animate from 0 to 100%
+      </p>
       <div className="bubble-gum tc">
         <Inner></Inner>
       </div>
