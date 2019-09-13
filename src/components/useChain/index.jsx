@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { Button } from "semantic-ui-react";
 
 function UseChain() {
-  const [modalOpened, setModal] = useState(false);
+  const [cardOpened, setCard] = useState(false);
 
-  const transition = useTransition(modalOpened, null, {
+  const transition = useTransition(cardOpened, null, {
     from: { opacity: 0, transform: "translate3d(0,50px,0) scale(0.98)" },
     enter: { opacity: 1, transform: "translate3d(0, 0, 0) scale(1)" },
     leave: { opacity: 0, transform: "translate3d(0,-50px,0) scale(0.98)" }
@@ -17,7 +17,7 @@ function UseChain() {
         <div className="flex justify-center">
           <Button
             onClick={() => {
-              setModal(!modalOpened);
+              setCard(!cardOpened);
             }}
           >
             Chain

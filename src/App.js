@@ -19,15 +19,16 @@ function App() {
       </div>
       <h1>Inner Text</h1>
       <p className="tl mb4">
-        Change this animation in order to make it animate from 0 to 100%
+        Change this animation in order to make it animate from 0 to 100%. Try
+        different configs, do you notice a problem?
       </p>
-      <div className="area gradient-4 tc">
+      <div className="area gradient-6 tc">
         <Inner></Inner>
       </div>
       <h1>Use Chain</h1>
       <p className="tl mb4">
-        Starting from this basic useTransition animation open the modal then
-        make the inner items appears (2 step animation)
+        Starting from this basic useTransition animation make the card appear
+        then make the inner items appears (2 step animation)
       </p>
       <div className="area gradient-8 tc">
         <UseChain></UseChain>
