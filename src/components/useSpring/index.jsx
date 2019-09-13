@@ -14,24 +14,23 @@ const Spring = () => {
 
   const buttonProps = useSpring({
     transform: pressed ? "scale(1.3) " : "scale(1)",
-    transformOrigin: 'center center',
+    transformOrigin: "center center",
     config: wobblyButton
   });
 
   return (
-    <div>    
+    <div>
       <animated.div className="inline-flex" style={buttonProps}>
-          <Button
-            onMouseDown={() => setPressed(true)}
-            onClick={() => {
-              setToggle(!toggle);
-              setPressed(false);
-            }}
-            onMouseLeave={() => setPressed(false)}
-            onMouse
-          >
-            Toggle
-          </Button>
+        <Button
+          onMouseDown={() => setPressed(true)}
+          onClick={() => {
+            setToggle(!toggle);
+            setPressed(false);
+          }}
+          onMouseLeave={() => setPressed(false)}
+        >
+          Toggle
+        </Button>
       </animated.div>
 
       <animated.div style={props}>
