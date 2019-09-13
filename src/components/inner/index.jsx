@@ -1,17 +1,13 @@
 import { animated, useSpring } from "react-spring";
 import React, { useState } from "react";
 import { Button } from "semantic-ui-react";
+import { animConfig } from "../../utils/configs";
 
 function Inner() {
   const [number, setNumber] = useState(0);
 
   const props = useSpring({
-    config: {
-      mass: 1,
-      tension: 170,
-      friction: 26,
-      clamp: true
-    },
+    config: animConfig,
     from: { chiffre: number },
     to: { chiffre: number }
   });
