@@ -27,7 +27,7 @@ function UseChain() {
           ({ item, key, props }) =>
             item && (
               <animated.div style={props} key={key} className="modal">
-                <div className="gradient-wrapper">
+                <div className="gradient-wrapper shadow-4">
                   <div className="gradient-box gradient-1"></div>
                   <div className="gradient-box gradient-2"></div>
                   <div className="gradient-box gradient-3"></div>
