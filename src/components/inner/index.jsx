@@ -1,16 +1,9 @@
-import { animated, useSpring } from "react-spring";
+import { animated } from "react-spring";
 import React, { useState } from "react";
 import { Button } from "semantic-ui-react";
-import { animConfig } from "../../utils/configs";
 
 function Inner() {
   const [number, setNumber] = useState(0);
-
-  // const props = useSpring({
-  //   config: animConfig,
-  //   from: { opacity: 0 },
-  //   to: { opacity: 1 }
-  // });
 
   return (
     <>

@@ -2,6 +2,7 @@ import React from "react";
 import Spring from "./components/useSpring";
 import Transition from "./components/useTransition";
 import Inner from "./components/inner";
+import UseChain from "./components/useChain";
 
 import "./App.css";
 
@@ -22,6 +23,10 @@ function App() {
       </p>
       <div className="bubble-gum tc">
         <Inner></Inner>
+      </div>
+      <h1>Use Chain</h1>
+      <div className="bubble-gum tc">
+        <UseChain></UseChain>
       </div>
     </div>
   );
