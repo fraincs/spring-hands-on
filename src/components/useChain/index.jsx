@@ -1,15 +1,48 @@
-import { animated, useTransition } from "react-spring";
-import React, { useState } from "react";
+import { animated, useChain, useTransition } from "react-spring";
+import React, { useRef, useState } from "react";
 import { Button } from "semantic-ui-react";
 
 function UseChain() {
   const [cardOpened, setCard] = useState(false);
 
-  const transition = useTransition(cardOpened, null, {
+  const data = [
+    {
+      name: "Rare Wind",
+      description: "#a8edea → #fed6e3",
+      css: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
+    },
+    {
+      name: "Saint Petersburg",
+      description: "#f5f7fa → #c3cfe2",
+      css: "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
+    }
+  ];
+
+  const cardRef = useRef();
+  const cardTransition = useTransition(cardOpened, null, {
     from: { opacity: 0, transform: "translate3d(0,50px,0) scale(0.98)" },
     enter: { opacity: 1, transform: "translate3d(0, 0, 0) scale(1)" },
-    leave: { opacity: 0, transform: "translate3d(0,-50px,0) scale(0.98)" }
+    leave: { opacity: 0, transform: "translate3d(0,-50px,0) scale(0.98)" },
+    ref: cardRef
   });
+
+  const tilesRef = useRef();
+  const tilesTransition = useTransition(
+    cardOpened ? data : [],
+    item => item.name,
+    {
+      from: { opacity: 0, transform: "translate3d(0,50px,0) scale(0.98)" },
+      enter: { opacity: 1, transform: "translate3d(0, 0, 0) scale(1)" },
+      leave: { opacity: 0, transform: "translate3d(0,0,0) scale(0.98)" },
+      trail: 400 / data.length,
+      ref: tilesRef
+    }
+  );
+
+  useChain(cardOpened ? [cardRef, tilesRef] : [tilesRef, cardRef], [
+    0,
+    cardOpened ? 0.1 : 0.6
+  ]);
 
   return (
     <>
@@ -23,20 +56,18 @@ function UseChain() {
             Chain
           </Button>
         </div>
-        {transition.map(
+        {cardTransition.map(
           ({ item, key, props }) =>
             item && (
               <animated.div style={props} key={key} className="modal">
                 <div className="gradient-wrapper shadow-4">
-                  <div className="gradient-box gradient-1"></div>
-                  <div className="gradient-box gradient-2"></div>
-                  <div className="gradient-box gradient-3"></div>
-                  <div className="gradient-box gradient-4"></div>
-                  <div className="gradient-box gradient-5"></div>
-                  <div className="gradient-box gradient-6"></div>
-                  <div className="gradient-box gradient-7"></div>
-                  <div className="gradient-box gradient-8"></div>
-                  <div className="gradient-box gradient-9"></div>
+                  {tilesTransition.map(({ item, key, props }) => (
+                    <animated.div
+                      className="gradient-box"
+                      key={key}
+                      style={{ ...props, background: item.css }}
+                    />
+                  ))}
                 </div>
               </animated.div>
             )

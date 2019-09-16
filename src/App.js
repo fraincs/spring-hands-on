@@ -9,11 +9,11 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>Simple useSpring</h1>
+      <h1>useSpring</h1>
       <div className="area gradient-2 tc">
         <Spring></Spring>
       </div>
-      <h1>Simple useTransition</h1>
+      <h1>useTransition</h1>
       <div className="area gradient-3 tc">
         <Transition></Transition>
       </div>
