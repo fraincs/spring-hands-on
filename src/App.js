@@ -13,10 +13,6 @@ function App() {
       <div className="area gradient-2 tc">
         <Spring></Spring>
       </div>
-      <h1>useTransition</h1>
-      <div className="area gradient-3 tc">
-        <Transition></Transition>
-      </div>
       <h1>Inner Text</h1>
       <p className="tl mb4">
         Change this animation in order to make it animate from 0 to 100%. Try
@@ -40,6 +36,10 @@ function App() {
       </p>
       <div className="area gradient-6 tc">
         <Inner></Inner>
+      </div>
+      <h1>useTransition</h1>
+      <div className="area gradient-3 tc">
+        <Transition></Transition>
       </div>
       <h1>Use Chain</h1>
       <p className="tl mb4">
