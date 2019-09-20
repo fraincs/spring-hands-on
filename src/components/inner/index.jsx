@@ -1,4 +1,3 @@
-import { animated } from "react-spring";
 import React, { useState } from "react";
 import { Button } from "semantic-ui-react";
 
@@ -13,7 +12,7 @@ function Inner() {
         </Button>
       </div>
       <p className="f1">
-        <animated.span>{number}</animated.span>
+        <span>{number}</span>
       </p>
     </>
   );

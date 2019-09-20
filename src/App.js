@@ -15,24 +15,7 @@ function App() {
       </div>
       <h1>Inner Text</h1>
       <p className="tl mb4">
-        Change this animation in order to make it animate from 0 to 100%. Try
-        different configs, do you notice a problem?
-        <br />
-        <strong>Spoiler </strong>
-        <mark>
-          <em>
-            {" "}
-            you will need to use the{" "}
-            <a
-              href="https://www.react-spring.io/docs/hooks/api"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              interpolate API
-            </a>
-            .
-          </em>
-        </mark>
+        Change this animation in order to make it animate from 0 to 100%.
       </p>
       <div className="area gradient-6 tc">
         <Inner></Inner>
