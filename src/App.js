@@ -52,8 +52,17 @@ function App() {
       </div>
       <h1>Animating auto</h1>
       <p className="tl mb4">
-        Starting from this basic useTransition animation make the card appear
-        then make the inner items appears (2 step animation)
+        Animating to an unknown height can be a challenge using hooks since
+        Hooks differ from renderprops in that they don't know the view.
+        Therefore handling "auto" is out of scope of the hooks api. See{" "}
+        <a
+          href="https://twitter.com/0xca0a/status/1094683974679621633"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://twitter.com/0xca0a/status/1094683974679621633
+        </a>
+        .
       </p>
       <div className="tl">
         <AnimateAuto></AnimateAuto>

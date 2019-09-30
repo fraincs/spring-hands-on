@@ -4,7 +4,7 @@ import Tree from "./tree";
 function AnimateAuto() {
   return (
     <div className="root">
-      <Tree name="main" defaultOpen>
+      <Tree name="main">
         <Tree name="hello" />
         <Tree name="subtree with children">
           <Tree name="hello" />
