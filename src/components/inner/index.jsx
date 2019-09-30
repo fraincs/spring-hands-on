@@ -1,9 +1,14 @@
-import { animated } from "react-spring";
 import React, { useState } from "react";
 import { Button } from "semantic-ui-react";
+import { config, useSpring, animated } from "react-spring";
 
 function Inner() {
   const [number, setNumber] = useState(0);
+  const props = useSpring({
+    number: number,
+    from: { number: 0 },
+    config: config.molasses
+  });
 
   return (
     <>
@@ -13,7 +18,9 @@ function Inner() {
         </Button>
       </div>
       <p className="f1">
-        <animated.span>{number}</animated.span>
+        <animated.span>
+          {props.number.interpolate(x => `${Math.round(x * 100)}%`)}
+        </animated.span>
       </p>
     </>
   );

@@ -3,6 +3,7 @@ import Spring from "./components/useSpring";
 import Transition from "./components/useTransition";
 import Inner from "./components/inner";
 import UseChain from "./components/useChain";
+import AnimateAuto from "./components/animateAuto";
 
 import "./App.css";
 
@@ -48,6 +49,14 @@ function App() {
       </p>
       <div className="area gradient-8 tc">
         <UseChain></UseChain>
+      </div>
+      <h1>Animating auto</h1>
+      <p className="tl mb4">
+        Starting from this basic useTransition animation make the card appear
+        then make the inner items appears (2 step animation)
+      </p>
+      <div className="tl">
+        <AnimateAuto></AnimateAuto>
       </div>
     </div>
   );
