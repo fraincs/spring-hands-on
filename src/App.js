@@ -3,7 +3,6 @@ import Spring from "./components/useSpring";
 import Transition from "./components/useTransition";
 import Inner from "./components/inner";
 import UseChain from "./components/useChain";
-import MyComponent from "./components/classComponent";
 
 import "./App.css";
 
@@ -32,10 +31,6 @@ function App() {
       </p>
       <div className="area gradient-8 tc">
         <UseChain />
-      </div>
-      <h1>Class components</h1>
-      <div className="area gradient-2 tc">
-        <MyComponent />
       </div>
     </div>
   );
